@@ -42,7 +42,7 @@
 
 <!-- Mobile Menu (Hidden by default) - Now fixed position overlay -->
 <div class="items-top fixed w-full mx-auto pb-7 bg-white bg-opacity-95 hidden z-40 pt-10 shadow-[0_10px_35px_rgba(0,0,0,0.15)]" id="mobileMenu">
-    <div class="container flex  flex-col mx-auto px-4">
+    <div class="container flex  flex-col mx-auto mt-18 px-4">
         <x-navbar href="/" class="block py-4 px-4 md:hover:bg-gray-100 rounded-lg text-xl text-center">Activities</x-navbar>
         <x-navbar href="/about" class="block py-4 px-4 md:hover:bg-gray-100 rounded-lg text-xl text-center">About</x-navbar>
         <x-navbar href="/contact" class="block py-4 px-4 md:hover:bg-gray-100 rounded-lg text-xl text-center mb-8">Contact</x-navbar>
@@ -52,9 +52,10 @@
         </div>
     </div>
 </div>
-
-{{ $slot }}
-
+    <div class="md:pt-[90px] pt-[50px]">
+        <!-- Main Content -->
+    {{ $slot }}
+    </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
