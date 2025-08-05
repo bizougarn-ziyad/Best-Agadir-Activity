@@ -9,13 +9,16 @@
     <title>Best Agadir Activity</title>
     <style>
         .swiper-pagination-bullet {
-            background-color: #f97316; /* Orange color */
+            background-color: #f97316; 
+        }
+        .swiper-pagination-bullet {
+            background-color: #f97316; 
         }
     </style>
 </head>
-<body class="font-[Outfit]">
+<body class="font-[Outfit] bg-[#fffaf0]">
 <!-- Responsive Navbar -->
-<nav class="flex md:flex-row justify-between items-center mx-auto bg-white gap-2 px-2 lg:px-5 md:w-[770px] lg:w-[900px] shadow-[0_1px_25px_rgba(0,0,0,0.1)] sm:rounded-[35px] fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 transition-all duration-300 ease-in-out">
+<nav class="flex md:flex-row justify-between items-center mx-auto gap-2 bg-white px-2 lg:px-5 md:w-[770px] lg:w-[900px] shadow-[0_1px_25px_rgba(0,0,0,0.1)] md:rounded-[35px] fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 transition-all duration-300 ease-in-out">
     <x-navbar href="/" class="">
         <img src="{{ asset('images/logoAgadir.png') }}" alt="Logo Agadir" class="w-[220px]">
     </x-navbar>
@@ -52,10 +55,10 @@
         </div>
     </div>
 </div>
-    <div class="md:pt-[90px] pt-[50px]">
-        <!-- Main Content -->
+
+<div>
     {{ $slot }}
-    </div>
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
