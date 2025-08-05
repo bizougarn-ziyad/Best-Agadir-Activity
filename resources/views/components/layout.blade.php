@@ -18,7 +18,7 @@
 </head>
 <body class="font-[Outfit] bg-[#fffaf0]">
 <!-- Responsive Navbar -->
-<nav class="flex md:flex-row justify-between items-center mx-auto gap-2 bg-white px-2 lg:px-5 md:w-[770px] lg:w-[900px] shadow-[0_1px_25px_rgba(0,0,0,0.1)] md:rounded-[35px] fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 transition-all duration-300 ease-in-out">
+<nav class="flex md:flex-row justify-between items-center mx-auto gap-2 bg-white px-2 lg:px-5 md:w-[770px] lg:w-[1000px] shadow-[0_1px_25px_rgba(0,0,0,0.1)] md:rounded-[35px] fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 transition-all duration-300 ease-in-out">
     <x-navbar href="/" class="">
         <img src="{{ asset('images/logoAgadir.png') }}" alt="Logo Agadir" class="w-[220px]">
     </x-navbar>
@@ -56,9 +56,9 @@
     </div>
 </div>
 
-<div>
+<main>
     {{ $slot }}
-</div>
+</main>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

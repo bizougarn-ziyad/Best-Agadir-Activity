@@ -1,5 +1,5 @@
 <x-layout>
-    <main class="pt-[107.05px]">
+    <div class="pt-[107.05px] max-w-[1200px] mx-auto">
         <div class="containerAll md:flex md:justify-between md:px-5">
             <div class="container-description  flex flex-col justify-center md:justify-normal  md:mt-[50px] items-center ">
             <div class="w-full h-[400px] xl:h-[500px] flex flex-col justify-evenly xl:justify-between">
@@ -95,6 +95,6 @@
         </div>
         </div>
         
-</main>
+    </div>
 
 </x-layout>
