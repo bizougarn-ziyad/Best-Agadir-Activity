@@ -1,7 +1,7 @@
 <x-layout>
     <main class="pt-[107.05px]">
         <div class="containerAll md:flex md:justify-between md:px-5">
-            <div class="container-description h-[calc(100dvh-107.05px)] flex flex-col justify-center md:justify-normal  md:mt-[50px] items-center ">
+            <div class="container-description  flex flex-col justify-center md:justify-normal  md:mt-[50px] items-center ">
             <div class="w-full h-[400px] xl:h-[500px] flex flex-col justify-evenly xl:justify-between">
                 <h1 class="text-center md:text-left font-bold px-1 text-[22px] xl:text-[55px] md:text-[30px] xl:w-[800px] md:w-[450px] lg:w-[500px]">Experience the <span class="text-orange-500 font-bold">real</span> Morocco, Right Here in Agadir!</h1>
                 <p class="text-center md:text-left mt-6 text-[15px] px-3 xl:text-[22px] md:text-[16px] xl:w-[750px] md:w-[400px] lg:w-[450px]">Join us for an unforgettable journey through the vibrant culture, stunning landscapes, and rich history of Morocco, all from the comfort of Agadir.</p>
@@ -27,8 +27,8 @@
             </div>
         </div>
 
-        <div class="container-activities flex flex-col justify-center lg:justify-normal lg:mt-[50px] h-[calc(100dvh-72px)]  mx-auto">
-            <div class="swiper mySwiper w-[320px] h-[500px] lg:w-[380px] xl:w-[450px] xl:h-[575px] pr-7 shadow-[0_1px_25px_rgba(0,0,0,0.1)] rounded-lg">
+        <div class="container-activities flex flex-col justify-center lg:justify-normal md:mt-[30px] mx-auto">
+            <div class="swiper mySwiper w-[320px] h-[500px] lg:w-[380px] xl:w-[450px] xl:h-[583px] pr-7 shadow-[0_1px_25px_rgba(0,0,0,0.1)] rounded-lg">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <p class="rounded-2xl w-10 h-5.2 text-center text-white  bg-orange-400 absolute right-4 top-2 z-100 text-[13px] xl:text-[17px] ">25€</p>
