@@ -31,7 +31,7 @@
     </div>
 
     <!-- Mobile Menu Button (Hamburger) -->
-    <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" id="mobileMenuButton">
+    <button class="md:hidden p-2 pr-5 rounded-lg hover:bg-gray-100" id="mobileMenuButton">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -61,48 +61,12 @@
 </main>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const navbar = document.querySelector('nav');
-
-        const originalShadow = 'shadow-[0_1px_25px_rgba(0,0,0,0.1)]';
-
-        mobileMenuButton.addEventListener('click', function() {
-            const isOpening = mobileMenu.classList.contains('hidden');
-
-            if (isOpening) {
-                navbar.classList.remove(originalShadow);
-                navbar.classList.add('shadow-none');
-                document.body.style.overflow = 'hidden'; 
-            } else {
-                navbar.classList.remove('shadow-none');
-                navbar.classList.add(originalShadow);
-                document.body.style.overflow = '';
-            }
-            
-            mobileMenu.classList.toggle('hidden');
-        });
-    });
+    
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script>
-      <!-- Initialize Swiper -->
-    var swiper = new Swiper(".mySwiper", {
-      cssMode: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      mousewheel: true,
-      keyboard: true,
-    });
-</script>
 
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 </body>
 </html>
