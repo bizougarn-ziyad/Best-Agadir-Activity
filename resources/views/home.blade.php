@@ -100,7 +100,7 @@
 
 <!--// Date and Travelers Selection Section-->
 
-<div class="max-w-[1200px] mx-auto sm:mt-[150px] md:mt-0 mt-[50px] ">
+<div class="max-w-[1200px] mx-auto sm:mt-[150px] mt-[50px] ">
     <h2 class="text-[16px] sm:text-[20px] md:text-[27px] xl:text-[29px] font-bold text-center text-orange-500 mb-[50px]">Variety of cheap Activities. One simple search.</h2>
     <div class="relative flex justify-center gap-2 lg:gap-5 max-w-[1200px] mx-auto">
         <!-- Date Selection Button -->
