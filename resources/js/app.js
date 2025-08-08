@@ -240,3 +240,76 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+//--------LoginMessage--------//
+
+// Handle success message
+const successAlert = document.getElementById('successAlert');
+if (successAlert) {
+    setTimeout(() => {
+        successAlert.style.transition = 'opacity 0.5s';
+        successAlert.style.opacity = '0';
+        setTimeout(() => {
+            successAlert.remove();
+        }, 500);
+    }, 3000);
+}
+
+// Handle error message
+const errorAlert = document.getElementById('errorAlert');
+if (errorAlert) {
+    setTimeout(() => {
+        errorAlert.style.transition = 'opacity 0.5s';
+        errorAlert.style.opacity = '0';
+        setTimeout(() => {
+            errorAlert.remove();
+        }, 500);
+    }, 3000);
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('login-form');
+    const signUpForm = document.getElementById('sign-up-form');
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const loginError = document.querySelector('.login-error');
+
+    function clearFormErrors(form) {
+        // Clear all error messages
+        const errorMessages = form.querySelectorAll('.text-red-500, .login-error');
+        errorMessages.forEach(error => error.remove());
+
+        // Remove red border from inputs
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.classList.remove('border-red-500');
+            input.value = ''; // Clear input values
+        });
+
+        // Remove any session error messages
+        const sessionErrors = document.querySelectorAll('[data-error-type="login"]');
+        sessionErrors.forEach(error => error.remove());
+    }
+
+    signUpButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        clearFormErrors(loginForm);
+        loginForm.classList.add('hidden');
+        signUpForm.classList.remove('hidden');
+        signUpForm.querySelector('input[name="first_name"]').focus();
+        
+        // Remove URL parameters
+        history.replaceState({}, '', window.location.pathname);
+    });
+
+    signInButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        clearFormErrors(signUpForm);
+        signUpForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+        loginForm.querySelector('input[name="email"]').focus();
+        
+        // Remove URL parameters
+        history.replaceState({}, '', window.location.pathname);
+    });
+});

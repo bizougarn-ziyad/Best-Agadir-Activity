@@ -6,25 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
-        Schema::create('exemples', function (Blueprint $table) {
+        Schema::create('user_data', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone')->nullable();
+            $table->string('password');
+            $table->string('google_id')->nullable();
+            $table->string('avatar')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('exemples');
+        Schema::dropIfExists('user_data');
     }
 };

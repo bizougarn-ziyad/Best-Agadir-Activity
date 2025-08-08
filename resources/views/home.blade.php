@@ -1,6 +1,17 @@
 <x-layout>
-    <div class="pt-[107.05px] lg:max-w-[1200px] mx-auto md:h-[100dvh]">
-        <div class="containerAll md:flex px-2 flex flex-col mx-auto md:gap-0 md:flex-row md:justify-around items-center">
+    @if (session('success'))
+        <div id="successAlert" class="alert alert-success text-green-500 pt-[120px] m-0 pb-0 absolute left-[50%] transform -translate-x-1/2 text-[13px] w-full flex justify-center">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div id="errorAlert" class="alert alert-danger text-red-500 pt-[120px] m-0 pb-0 absolute left-[50%] transform -translate-x-1/2 w-full">
+            {{ session('error') }}
+        </div>
+    @endif
+    <div class="pt-[107.05px] lg:max-w-[1200px] mx-auto md:h-[100dvh] flex justify-center md:flex-row">
+        <div class="containerAll md:flex px-2 flex flex-col mx-auto md:gap-0 md:flex-row md:justify-around items-center xl:gap-8">
             <div class="container-description flex flex-col justify-center md:justify-normal items-center ">
             <div class=" md:h-[400px] xl:h-[500px] xl:w-full flex flex-col justify-center gap-5 xl:justify-between h-[calc(100dvh-90px)] items-center md:items-start ">
                 <h1 class="text-center md:text-left font-bold px-1 text-[20px] xl:text-[55px] sm:text-[30px] xl:w-[750px] md:w-[430px] sm:w-[520px] lg:w-[550px] w-[300px]">Experience the <span class="text-orange-500 font-bold">real</span> Morocco, Right Here in Agadir!</h1>
@@ -29,11 +40,11 @@
 
         <div class="container-activities flex flex-col justify-center lg:justify-normal md:mt-[30px]  h-[calc(100dvh)] sm:h-auto lg:w-[380px]">
             <h2 class="text-[18px] font-bold text-center mb-5 text-orange-500 md:hidden">Best Selling Activities</h2>
-            <div class="swiper mySwiper w-[320px] h-[500px] lg:w-[380px] xl:w-[450px] xl:h-[583px] shadow-[0_1px_25px_rgba(0,0,0,0.1)] rounded-lg">
+            <div class="swiper mySwiper w-[320px] h-[500px] lg:w-[350px] xl:w-[380px] xl:h-[583px] shadow-[0_1px_25px_rgba(0,0,0,0.1)] rounded-lg">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <p class="rounded-2xl w-10 h-5.2 text-center text-white  bg-orange-400 absolute right-4 top-2 z-100 text-[13px] xl:text-[17px] ">25€</p>
-                        <img src="{{ asset('images/activity1.jpg') }} " alt="Activity 1" class="h-[213px] lg:w-full xl:h-[270px] lg:h-[240px]">
+                        <p class="rounded-2xl w-10 h-5.2 text-center text-white  bg-green-400 absolute right-4 top-2 z-100 text-[13px] xl:text-[17px] ">25€</p>
+                        <img src="{{ asset('images/activity1.jpg') }} " alt="Activity 1" class="h-[213px] lg:w-full xl:h-[250px] lg:h-[240px]">
                         
                         <div class="mt-5 flex justify-center items-center gap-2">
                             <img src="{{ asset('images/secondstar.png') }}" alt="ratings" class="w-[15px] ">
@@ -51,8 +62,8 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <p class="rounded-2xl w-10 h-5.2 text-center text-white  bg-orange-400 absolute right-4 top-2 z-100 text-[13px] ">65€</p>      
-                        <img src="{{ asset('images/activity3.jpg') }}" alt="Activity 3" class="h-[213px] lg:w-full xl:h-[270px] lg:h-[240px]">
+                        <p class="rounded-2xl w-10 h-5.2 text-center text-white  bg-green-400 absolute right-4 top-2 z-100 text-[13px] xl:text-[17px] ">65€</p>      
+                        <img src="{{ asset('images/activity3.jpg') }}" alt="Activity 3" class="h-[213px] lg:w-full xl:h-[250px] lg:h-[240px]">
                         
                         <div class="mt-5 flex justify-center items-center gap-2">
                             <img src="{{ asset('images/secondstar.png') }}" alt="ratings" class="w-[15px] ">
@@ -71,8 +82,8 @@
                     </div>
                     
                     <div class="swiper-slide">
-                        <p class="rounded-2xl w-10 h-5.2 text-center text-white  bg-orange-400 absolute right-4 top-2 z-100 text-[13px]">45€</p>
-                        <img src="{{ asset('images/activity2.jpg') }}" alt="Activity 2" class="h-[213px] lg:w-full xl:h-[270px] lg:h-[240px]">
+                        <p class="rounded-2xl w-10 h-5.2 text-center text-white  bg-green-400 absolute right-4 top-2 z-100 text-[13px] xl:text-[17px] ">45€</p>
+                        <img src="{{ asset('images/activity2.jpg') }}" alt="Activity 2" class="h-[213px] lg:w-full xl:h-[250px] lg:h-[240px]">
                         <div class="mt-5 flex justify-center items-center gap-2">
                             <img src="{{ asset('images/secondstar.png') }}" alt="ratings" class="w-[15px] ">
                             <p class="text-[13px] xl:text-[17px] font-bold m-0 p-0">4.5 <span class="text-gray-400 font-normal">(27 ratings)</span></p>
@@ -89,7 +100,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next after:text-black"></div>
                 <div class="swiper-button-prev after:text-black"></div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -184,7 +194,7 @@
         </button>    
     </div>
     <div class="max-w-[1200px] mx-auto px-5 relative">
-        <img src="{{ asset('images/marina_agadir.avif') }}" alt="Marina Agadir" class="w-full h-[400px] object-cover mt-[70px] rounded-lg shadow-lg blur-[2px]">
+        <img src="{{ asset('images/marina_agadir.avif') }}" alt="Marina Agadir" class="w-full h-[400px] xl:h-[500px] object-cover mt-[70px] rounded-lg shadow-lg blur-[2px]">
         <p class="font-bold absolute left-10 lg:left-15 top-20 lg:top-30 text-white bg-transparent text-[17px] sm:text-[25px] lg:text-[30px]">Can't decide ? <br>Explore every activity in the city</p>
         <button class="bg-orange-500 text-white px-2 py-3 rounded-lg hover:bg-orange-400 transition duration-300 absolute left-10 lg:left-15 top-60 sm:text-[22px] text-[15px]">Search activities all over Agadir &rarr;</button>
     </div>
@@ -206,4 +216,5 @@
         <p class="text-center text-white text-[13px]">Terms of Service | Privacy Policy</p>
     </div>
 </div>
+<script src="{{ asset('js/app.js') }}"></script>
 </x-layout>

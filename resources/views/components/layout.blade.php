@@ -50,7 +50,7 @@
         <x-navbar href="/about" class="block py-4 px-4 md:hover:bg-gray-100 rounded-lg text-xl text-center">About</x-navbar>
         <x-navbar href="/contact" class="block py-4 px-4 md:hover:bg-gray-100 rounded-lg text-xl text-center mb-8">Contact</x-navbar>
         <div class="flex gap-4 mt-6 px-4">
-            <button class="flex-1 bg-gray-100 px-4 py-3 rounded-[20px] text-lg cursor-pointer">📞Call Us</button>
+            <a href="{{ route('login') }}" class="flex-1 bg-gray-100 px-4 py-3 rounded-[20px] text-lg cursor-pointer border shadow-lg text-center">Login</a>
             <button class="flex-1 bg-orange-500 px-4 py-3 rounded-[20px] text-white text-lg cursor-pointer">Book Now</button>
         </div>
     </div>
