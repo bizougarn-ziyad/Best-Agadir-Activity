@@ -7,10 +7,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
 
-route::get('/contact/{id}', function (string $id) {
-    return view('contact');
-});

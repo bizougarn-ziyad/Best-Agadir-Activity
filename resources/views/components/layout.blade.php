@@ -38,7 +38,7 @@
     </button>
 
     <div class="hidden md:flex gap-4 mr-3">
-        <button class="bg-gray-100 px-4 py-2 rounded-[20px] cursor-pointer hover:bg-gray-200 transition duration-300">📞Call Us</button>
+        <a href="{{ route('login') }}" class="bg-gray-100 px-4 py-2 rounded-[20px] cursor-pointer hover:bg-gray-200 transition duration-300">Login</a>
         <button class="bg-orange-500 px-4 py-2 rounded-[20px] text-white cursor-pointer hover:bg-orange-400 transition duration-300">Book Now</button>
     </div>
 </nav>
@@ -60,13 +60,9 @@
     {{ $slot }}
 </main>
 
-<script>
-    
-</script>
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
 @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
 </body>
 </html>
